@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="460.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.SBB.FXMLDocumentController">
+   <children>
+      <RadioButton fx:id="rbtn1" layoutX="36.0" layoutY="45.0" mnemonicParsing="false" onAction="#zoneOne" text="Zone 1">
+         <toggleGroup>
+            <ToggleGroup fx:id="zone" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbtn2" layoutX="36.0" layoutY="88.0" mnemonicParsing="false" onAction="#zoneTwo" text="Zone 2" toggleGroup="$zone" />
+      <RadioButton fx:id="rbtn3" layoutX="36.0" layoutY="129.0" mnemonicParsing="false" onAction="#zoneThree" text="Zone 3" toggleGroup="$zone" />
+      <RadioButton fx:id="rbtn4" layoutX="36.0" layoutY="172.0" mnemonicParsing="false" onAction="#zoneFour" text="Zone 4" toggleGroup="$zone" />
+      <RadioButton fx:id="rbtnGanz" layoutX="36.0" layoutY="237.0" mnemonicParsing="false" onAction="#ganz" text="Ganz">
+         <toggleGroup>
+            <ToggleGroup fx:id="abo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbtnHalb" layoutX="126.0" layoutY="237.0" mnemonicParsing="false" onAction="#halb" text="Halb-Tax" toggleGroup="$abo" />
+      <Button fx:id="btnBerechnen" layoutX="32.0" layoutY="282.0" mnemonicParsing="false" onAction="#berechnen" text="Berechnen" />
+      <Button fx:id="btnBezahlen" layoutX="200.0" layoutY="351.0" mnemonicParsing="false" onAction="#bezahlen" text="bezahlen" />
+      <Label fx:id="lblBetr" layoutX="32.0" layoutY="356.0" prefHeight="21.0" prefWidth="61.0" text="Betrag:" />
+      <Label fx:id="lblBezahlen" layoutX="32.0" layoutY="407.0" prefHeight="21.0" prefWidth="61.0" />
+      <Label fx:id="lbl1" layoutX="109.0" layoutY="407.0" prefHeight="21.0" prefWidth="240.0" text="noch zu bezahlen" />
+      <Button fx:id="btnDrucken" layoutX="361.0" layoutY="402.0" mnemonicParsing="false" onAction="#drucken" text="Drucken" />
+      <ListView fx:id="lvAusgabe" layoutX="165.0" layoutY="40.0" prefHeight="178.0" prefWidth="265.0" />
+      <TextField fx:id="tfBetrag" layoutX="85.0" layoutY="351.0" prefHeight="31.0" prefWidth="103.0" />
+   </children>
+</AnchorPane>
